@@ -3788,6 +3788,8 @@ input, select, textarea {
 		
 /* Dark black + royal blue theme override */
 
+/*
+
 body {
 	background-color: #05070d !important;
 	background-image: url("images/overlay.png"), linear-gradient(135deg, #05070d 10%, #0a1024 45%, #183a8a 100%) !important;
@@ -3964,3 +3966,5 @@ table tbody tr:nth-child(2n + 1) {
 .icon.style3 { color: #1f2a44 !important; }
 .icon.style4 { color: #4d6fe6 !important; }
 .icon.style5 { color: #6f8cff !important; }
+
+*/
