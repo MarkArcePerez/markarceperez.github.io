@@ -3784,225 +3784,100 @@ input, select, textarea {
 
 		}
 		
-/* Dark black + royal blue theme override */
+/* Card-style sections for better separation */
 
-/* Page background */
-body {
-	background-color: #05070d !important;
-	background-image: url("images/overlay.png"),
-		linear-gradient(135deg, #05070d 10%, #0a1024 45%, #183a8a 100%) !important;
-	color: rgba(255, 255, 255, 0.78) !important;
-}
-
-/* Global text */
-body, input, select, textarea {
-	color: rgba(255, 255, 255, 0.78) !important;
-}
-
-a {
-	color: #9ec5ff !important;
-}
-
-a:hover {
-	color: #ffffff !important;
-}
-
-strong, b,
-h1, h2, h3, h4, h5, h6,
-label,
-dl dt,
-table th {
-	color: #ffffff !important;
-}
-
-blockquote {
-	border-left-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-code {
-	background: rgba(255, 255, 255, 0.05) !important;
-	border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-hr,
-.box,
-ul.alt li,
-table tbody tr,
-table thead,
-table tfoot,
-table.alt tbody tr td,
-.icon.major,
-.icon.major:before,
-header.major h2:after {
-	border-color: rgba(255, 255, 255, 0.18) !important;
-}
-
-header.major h2:after {
-	background-color: rgba(255, 255, 255, 0.18) !important;
-}
-
-/* Navigation */
-#nav {
-	background-color: rgba(10, 16, 36, 0.92) !important;
-	color: rgba(255, 255, 255, 0.82) !important;
-}
-
-#nav strong,
-#nav b,
-#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6,
-#nav a {
-	color: #ffffff !important;
-}
-
-#nav a:hover {
-	background-color: rgba(255, 255, 255, 0.08) !important;
-	color: #ffffff !important;
-}
-
-#nav ul li a.active {
-	background-color: #183a8a !important;
-	color: #ffffff !important;
-}
-
-#nav.alt {
-	background-color: rgba(5, 7, 13, 0.96) !important;
-}
-
-/* Main content area */
 #main {
-	background-color: #0b1220 !important;
-	color: rgba(255, 255, 255, 0.8) !important;
+	padding: 2.5em !important;
 }
 
-#main,
+/* Each main section becomes a distinct panel */
+#main > section {
+	background: linear-gradient(180deg, rgba(10, 24, 56, 0.88), rgba(6, 18, 44, 0.92)) !important;
+	border: 1px solid rgba(120, 170, 255, 0.14) !important;
+	border-radius: 16px !important;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.32) !important;
+	padding: 3.25em 3em !important;
+	margin: 0 0 2em 0 !important;
+}
+
+/* Remove the old flat divider look */
+#main > section:first-child {
+	border-top: 1px solid rgba(120, 170, 255, 0.14) !important;
+}
+
+#main > section:last-child {
+	margin-bottom: 0 !important;
+}
+
+/* Stronger section headings */
+#main header.major {
+	margin-bottom: 2em !important;
+}
+
+#main header.major h2 {
+	font-size: 2.1em !important;
+	letter-spacing: -0.02em !important;
+}
+
+#main header.major h2:after {
+	width: 4.25em !important;
+	height: 3px !important;
+	background: linear-gradient(90deg, #6ea8ff, #244da8) !important;
+	border-radius: 999px !important;
+}
+
+/* Better text spacing inside cards */
 #main p,
-#main li,
-#main dl dd,
-#main input,
-#main select,
-#main textarea {
-	color: rgba(255, 255, 255, 0.8) !important;
+#main li {
+	line-height: 1.9 !important;
 }
 
-#main h1,
-#main h2,
-#main h3,
-#main h4,
-#main h5,
-#main h6,
-#main strong,
-#main b,
-#main label {
-	color: #ffffff !important;
+/* Subtle hover polish */
+#main > section:hover {
+	transform: translateY(-2px);
+	transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+	box-shadow: 0 18px 36px rgba(0, 0, 0, 0.38) !important;
 }
 
-#main a {
-	color: #9ec5ff !important;
+/* Keep stats/features/cards consistent if you use them */
+.features section,
+.spotlight .content,
+.statistics {
+	background: rgba(255, 255, 255, 0.03) !important;
+	border: 1px solid rgba(255, 255, 255, 0.07) !important;
+	border-radius: 12px !important;
+	padding: 1.5em !important;
 }
 
-#main a:hover {
-	color: #ffffff !important;
-}
-
-#main blockquote {
-	border-left-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-#main code {
-	background: rgba(255, 255, 255, 0.05) !important;
-	border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-#main hr,
-#main .box {
-	border-color: rgba(255, 255, 255, 0.18) !important;
-}
-
-/* Buttons */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button,
-.button,
-#main input[type="submit"],
-#main input[type="reset"],
-#main input[type="button"],
-#main button,
+/* Buttons look cleaner inside cards */
 #main .button {
-	background-color: transparent !important;
-	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
-	color: #ffffff !important;
+	border-radius: 10px !important;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover,
-.button:hover,
-#main input[type="submit"]:hover,
-#main input[type="reset"]:hover,
-#main input[type="button"]:hover,
-#main button:hover,
-#main .button:hover {
-	background-color: rgba(255, 255, 255, 0.08) !important;
+/* Mobile spacing */
+@media screen and (max-width: 980px) {
+	#main {
+		padding: 1.5em !important;
+	}
+
+	#main > section {
+		padding: 2.25em 1.5em !important;
+		border-radius: 14px !important;
+	}
 }
 
-input[type="submit"].primary,
-input[type="reset"].primary,
-input[type="button"].primary,
-button.primary,
-.button.primary,
-#main input[type="submit"].primary,
-#main input[type="reset"].primary,
-#main input[type="button"].primary,
-#main button.primary,
-#main .button.primary {
-	background-color: #183a8a !important;
-	color: #ffffff !important;
-	box-shadow: none !important;
-}
+@media screen and (max-width: 736px) {
+	#main {
+		padding: 1em !important;
+	}
 
-/* Forms */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select,
-textarea,
-#main input[type="text"],
-#main input[type="password"],
-#main input[type="email"],
-#main select,
-#main textarea {
-	background-color: rgba(255, 255, 255, 0.06) !important;
-	border-color: rgba(255, 255, 255, 0.18) !important;
-	color: #ffffff !important;
-}
+	#main > section {
+		padding: 1.75em 1.15em !important;
+		margin-bottom: 1.25em !important;
+		border-radius: 12px !important;
+	}
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-select:focus,
-textarea:focus,
-#main input[type="text"]:focus,
-#main input[type="password"]:focus,
-#main input[type="email"]:focus,
-#main select:focus,
-#main textarea:focus {
-	border-color: #6ea8ff !important;
-	box-shadow: 0 0 0 1px #6ea8ff !important;
-}
-
-::placeholder {
-	color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* Footer */
-#footer {
-	color: rgba(255, 255, 255, 0.75) !important;
-}
-
-#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
-#footer strong, #footer b,
-#footer a {
-	color: #ffffff !important;
+	#main header.major h2 {
+		font-size: 1.7em !important;
+	}
 }
