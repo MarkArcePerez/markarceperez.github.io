@@ -3901,27 +3901,128 @@ a:hover {
 	border-radius: 999px !important;
 }
 
-/* Buttons */
+/* Base button styles */
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
-	background: #dce9ff !important;
+input[type="button"],
+#main .button,
+#footer .button,
+ul.actions .button,
+ul.actions li .button,
+a.button,
+span.button {
+	background: #e8eef7 !important;
 	color: #243244 !important;
-	border: 1px solid #dce9ff !important;
+	-webkit-text-fill-color: #243244 !important;
+	border: 1px solid #e8eef7 !important;
 	box-shadow: none !important;
+	opacity: 1 !important;
+	text-shadow: none !important;
+	font-weight: 600 !important;
+}
+
+/* Force any nested text inside buttons to be visible */
+.button *,
+button *,
+#main .button *,
+#footer .button *,
+ul.actions .button *,
+a.button *,
+span.button * {
+	color: #243244 !important;
+	-webkit-text-fill-color: #243244 !important;
+	opacity: 1 !important;
+	text-shadow: none !important;
+}
+
+/* Links that are buttons */
+a.button:link,
+a.button:visited,
+a.button:active,
+#main a.button:link,
+#main a.button:visited,
+#main a.button:active,
+#footer a.button:link,
+#footer a.button:visited,
+#footer a.button:active {
+	color: #243244 !important;
+	-webkit-text-fill-color: #243244 !important;
+}
+
+/* Hover/focus */
+.button:hover,
+.button:focus,
+.button:active,
+button:hover,
+button:focus,
+button:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:active,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="button"]:active,
+#main .button:hover,
+#main .button:focus,
+#footer .button:hover,
+#footer .button:focus,
+a.button:hover,
+a.button:focus {
+	background: #ffffff !important;
+	color: #1b2838 !important;
+	-webkit-text-fill-color: #1b2838 !important;
+	border-color: #ffffff !important;
 	opacity: 1 !important;
 }
 
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
+/* Hover/focus nested text */
+.button:hover *,
+.button:focus *,
+.button:active *,
+#main .button:hover *,
+#main .button:focus *,
+#footer .button:hover *,
+#footer .button:focus *,
+a.button:hover *,
+a.button:focus * {
+	color: #1b2838 !important;
+	-webkit-text-fill-color: #1b2838 !important;
+	opacity: 1 !important;
+}
+
+/* Disabled-looking Stellar buttons: force readable anyway */
+.button.disabled,
+.button:disabled,
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled,
+#main .button.disabled,
+#footer .button.disabled {
+	background: #e8eef7 !important;
+	color: #243244 !important;
+	-webkit-text-fill-color: #243244 !important;
+	border-color: #e8eef7 !important;
+	opacity: 1 !important;
+	cursor: pointer !important;
+}
+
+/* If Stellar uses alt/special button variants */
+.button.primary,
+.button.special,
+#main .button.primary,
+#main .button.special,
+#footer .button.primary,
+#footer .button.special {
 	background: #ffffff !important;
 	color: #1b2838 !important;
-	border-color: #ffffff !important;
+	-webkit-text-fill-color: #1b2838 !important;
+	border: 1px solid #ffffff !important;
 }
 
 /* Forms */
@@ -3946,7 +4047,7 @@ textarea:focus {
 
 /* Footer */
 #footer {
-	color: rgba(255, 255, 255, 0.82) !important;
+	color: rgba(255, 255, 255, 0.88) !important;
 }
 
 #footer h1,
@@ -3957,8 +4058,19 @@ textarea:focus {
 #footer h6,
 #footer strong,
 #footer b,
-#footer a {
+#footer a,
+#footer p,
+#footer li,
+#footer dd,
+#footer dt {
 	color: #ffffff !important;
+}
+
+/* Footer social icons */
+#footer .icons a,
+#footer .icons a:before {
+	color: #ffffff !important;
+	border-color: rgba(255, 255, 255, 0.45) !important;
 }
 
 /* Mobile */
